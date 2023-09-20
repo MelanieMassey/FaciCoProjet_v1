@@ -1,0 +1,126 @@
+:root {
+ --primary-color_dark-blue: #062f4d;
+ --primary-color_light-beige: #fbf7f3;
+ --secondary-color_light-blue: #9fb0ff;
+ --secondary-color_yellow: #fff76e;
+ --secondary-color_orange: #ff583a;
+ --secondary-color_beige: #f6ecdd;
+ --secondary-color_brown: #e3c2a3;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    margin: 0 auto;
+    font-size: 18px;
+    background: var(--primary-color_light-beige);
+    /* position: relative; */
+}
+
+/*** HEADER ***/
+header {
+    height: 20vh;
+    width: 100%;
+    background: var( --primary-color_dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+#header-logo {
+    height: 10vh;
+    margin: 0.5rem 0;
+}
+
+nav {
+    
+    display: flex;
+    justify-content: center;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    
+    
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color_light-beige);
+    padding: 1rem 0.5rem;
+    /* border-bottom: 2px solid transparent; */
+    
+}
+
+nav a:hover {
+    color: var(--secondary-color_yellow);
+    transition: 0.3s;
+}
+
+nav a:active {
+    color: var(--secondary-color_orange);
+}
+
+nav a::after{
+    display:block;
+    content: '';
+    border-bottom: 2px solid var(--secondary-color_yellow);
+    padding-top: 0.5rem;
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    /* border-bottom: 2px solid var(--secondary-color_yellow); */
+    /* text-shadow: var(--secondary-color_beige) 1px 0 5px; */
+}
+
+/*** MAIN ***/
+main {
+    margin-top: 20vh;
+}
+section {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 2rem;
+}
+
+section:nth-child(even) {
+    background-color: var(--secondary-color_beige);
+}
+
+/* .section-welcome div {
+    width: 50vw;
+    height: 40vh;
+    background-image: url("../assets/ticket_rouge_rvb.png");
+    background-size:cover;
+} */
+
+
+/*** FOOTER ***/
+footer {
+    width: 100vw;
+    height: 2rem;
+    color: var(--primary-color_light-beige);
+    font-size: 0.8rem;
+    background-color: var(--primary-color_dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* @media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+} */
+
+/* @media screen and (max-width: 768px) {
+    
+} */
